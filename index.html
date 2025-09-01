@@ -1,42 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sun Office Furniture offers premium ergonomic office furniture since 2018. Explore ergonomic chairs, modular workstations, and custom solutions. Trusted by businesses for quality and service.">
     <title>Sun Office Furniture - Premium Office Solutions Since 2018</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        
+
         * {
             font-family: 'Inter', sans-serif;
         }
-        
+
         .fade-in {
             opacity: 0;
             transform: translateY(30px);
             transition: all 0.8s ease;
         }
-        
+
         .fade-in.visible {
             opacity: 1;
             transform: translateY(0);
         }
-        
+
         .hero-bg {
-            background: linear-gradient(135deg, rgba(0,0,0,0.6), rgba(0,0,0,0.4)), 
-                        url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)),
+                url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
-        
+
         .product-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
         }
-        
+
         .floating-whatsapp {
             position: fixed;
             bottom: 20px;
@@ -53,19 +55,19 @@
             box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
             transition: all 0.3s ease;
         }
-        
+
         .floating-whatsapp:hover {
             transform: scale(1.1);
             box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
         }
-        
+
         .gallery-item {
             background-size: cover;
             background-position: center;
             position: relative;
             overflow: hidden;
         }
-        
+
         .gallery-item::before {
             content: '';
             position: absolute;
@@ -73,20 +75,20 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(45deg, rgba(0,0,0,0.3), transparent);
+            background: linear-gradient(45deg, rgba(0, 0, 0, 0.3), transparent);
             opacity: 0;
             transition: opacity 0.3s ease;
         }
-        
+
         .gallery-item:hover::before {
             opacity: 1;
         }
-        
+
         .testimonial-card {
             background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
             border-left: 4px solid #eab308;
         }
-        
+
         .stats-counter {
             font-size: 3rem;
             font-weight: 700;
@@ -95,27 +97,27 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        
+
         .product-modal {
             backdrop-filter: blur(10px);
         }
-        
+
         .modal-content {
             max-height: 90vh;
             overflow-y: auto;
         }
     </style>
 </head>
+
 <body class="bg-white text-gray-900">
     <!-- Navigation -->
     <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
-                    <img src="https://i.ibb.co/yFVkZWJt/standard-color.png" 
-                         alt="Sun Office Furniture Logo" 
-                         class="h-10 w-auto mr-3"
-                         onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <img src="https://i.ibb.co/yFVkZWJt/standard-color.png" alt="Sun Office Furniture Logo"
+                        class="h-10 w-auto mr-3"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                     <div class="text-2xl font-bold text-gray-900">
                         Sun Office Furniture
                     </div>
@@ -126,15 +128,24 @@
                 </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#home" class="text-gray-900 hover:text-yellow-600 px-3 py-2 text-sm font-medium transition-colors">Home</a>
-                        <a href="#products" class="text-gray-700 hover:text-yellow-600 px-3 py-2 text-sm font-medium transition-colors">Products</a>
-                        <a href="#industries" class="text-gray-700 hover:text-yellow-600 px-3 py-2 text-sm font-medium transition-colors">Industries</a>
-                        <a href="#gallery" class="text-gray-700 hover:text-yellow-600 px-3 py-2 text-sm font-medium transition-colors">Gallery</a>
-                        <a href="#custom" class="text-gray-700 hover:text-yellow-600 px-3 py-2 text-sm font-medium transition-colors">Custom</a>
-                        <a href="#about" class="text-gray-700 hover:text-yellow-600 px-3 py-2 text-sm font-medium transition-colors">About</a>
-                        <a href="#blog" class="text-gray-700 hover:text-yellow-600 px-3 py-2 text-sm font-medium transition-colors">Blog</a>
-                        <a href="#faq" class="text-gray-700 hover:text-yellow-600 px-3 py-2 text-sm font-medium transition-colors">FAQ</a>
-                        <a href="#contact" class="text-gray-700 hover:text-yellow-600 px-3 py-2 text-sm font-medium transition-colors">Contact</a>
+                        <a href="#home"
+                            class="text-gray-900 hover:text-yellow-600 px-3 py-2 text-sm font-medium transition-colors">Home</a>
+                        <a href="#products"
+                            class="text-gray-700 hover:text-yellow-600 px-3 py-2 text-sm font-medium transition-colors">Products</a>
+                        <a href="#industries"
+                            class="text-gray-700 hover:text-yellow-600 px-3 py-2 text-sm font-medium transition-colors">Industries</a>
+                        <a href="#gallery"
+                            class="text-gray-700 hover:text-yellow-600 px-3 py-2 text-sm font-medium transition-colors">Gallery</a>
+                        <a href="#custom"
+                            class="text-gray-700 hover:text-yellow-600 px-3 py-2 text-sm font-medium transition-colors">Custom</a>
+                        <a href="#about"
+                            class="text-gray-700 hover:text-yellow-600 px-3 py-2 text-sm font-medium transition-colors">About</a>
+                        <a href="#blog"
+                            class="text-gray-700 hover:text-yellow-600 px-3 py-2 text-sm font-medium transition-colors">Blog</a>
+                        <a href="#faq"
+                            class="text-gray-700 hover:text-yellow-600 px-3 py-2 text-sm font-medium transition-colors">FAQ</a>
+                        <a href="#contact"
+                            class="text-gray-700 hover:text-yellow-600 px-3 py-2 text-sm font-medium transition-colors">Contact</a>
                     </div>
                 </div>
                 <div class="md:hidden">
@@ -165,16 +176,22 @@
         <div class="text-center max-w-4xl mx-auto px-4">
             <h1 class="text-5xl md:text-7xl font-light mb-6 fade-in">
                 Welcome to Sun Office Furniture<br>
-                <span class="font-semibold">Crafting Comfort. Designing Productivity.</span>
             </h1>
+            <h2>
+                <span class="font-semibold">Crafting Comfort. Designing Productivity.</span>
+            </h2>
+
+
             <p class="text-lg md:text-xl mb-8 font-light opacity-90 fade-in max-w-4xl mx-auto leading-relaxed">
-                Since 2018, Sun Office Furniture has been redefining workspaces with premium-quality office furniture, built on over 27 years of industry expertise. From sleek executive chairs to smart modular workstations, we manufacture a complete range of office furniture designed to support comfort, function, and style.
+                Since 2018, Sun Office Furniture has been redefining workspaces with premium-quality office furniture,
+                built on over 27 years of industry expertise. From sleek executive chairs to smart modular workstations,
+                we manufacture a complete range of office furniture designed to support comfort, function, and style.
             </p>
             <p class="text-lg md:text-xl mb-8 font-light opacity-90 fade-in">
                 Experience the difference where craftsmanship meets innovation.
             </p>
-            <button onclick="document.getElementById('products').scrollIntoView({behavior: 'smooth'})" 
-                    class="bg-yellow-500 hover:bg-yellow-600 text-black px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 fade-in">
+            <button onclick="document.getElementById('products').scrollIntoView({behavior: 'smooth'})"
+                class="bg-yellow-500 hover:bg-yellow-600 text-black px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 fade-in">
                 Explore Our Range →
             </button>
         </div>
@@ -189,14 +206,16 @@
                         <i class="fas fa-industry text-2xl text-yellow-600"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-2">In-House Manufacturing</h3>
-                    <p class="text-gray-600">Complete control over quality and customization with our state-of-the-art facility</p>
+                    <p class="text-gray-600">Complete control over quality and customization with our state-of-the-art
+                        facility</p>
                 </div>
                 <div class="text-center fade-in">
                     <div class="w-16 h-16 mx-auto mb-4 bg-yellow-100 rounded-full flex items-center justify-center">
                         <i class="fas fa-chair text-2xl text-yellow-600"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-2">Since 2018</h3>
-                    <p class="text-gray-600">Built on over 27 years of industry expertise in creating ergonomic and stylish office solutions</p>
+                    <p class="text-gray-600">Built on over 27 years of industry expertise in creating ergonomic and
+                        stylish office solutions</p>
                 </div>
                 <div class="text-center fade-in">
                     <div class="w-16 h-16 mx-auto mb-4 bg-yellow-100 rounded-full flex items-center justify-center">
@@ -216,89 +235,107 @@
                 <h2 class="text-4xl font-light mb-4">Our Product Range</h2>
                 <div class="w-24 h-1 bg-yellow-500 mx-auto"></div>
             </div>
-            
+
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 fade-in">
+                <div
+                    class="product-card bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 fade-in">
                     <div class="h-72 overflow-hidden bg-gray-50 flex items-center justify-center">
-                        <img src="https://images.unsplash.com/photo-1541558869434-2840d308329a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="Executive Office Chair" 
-                             class="max-w-full max-h-full object-contain hover:scale-105 transition-transform duration-300"
-                             onerror="this.src=''; this.alt='Executive Chair - Image failed to load'; this.style.display='none';">
+                        <img src="https://images.unsplash.com/photo-1541558869434-2840d308329a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Executive Office Chair"
+                            class="max-w-full max-h-full object-contain hover:scale-105 transition-transform duration-300"
+                            onerror="this.src=''; this.alt='Executive Chair - Image failed to load'; this.style.display='none';">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-2">Executive Chairs</h3>
                         <p class="text-gray-600 mb-4">Premium ergonomic chairs designed for comfort and style</p>
-                        <button onclick="showProductModal('executive-chairs')" class="text-yellow-600 hover:text-yellow-700 font-medium transition-colors cursor-pointer">View More →</button>
+                        <button onclick="showProductModal('executive-chairs')"
+                            class="text-yellow-600 hover:text-yellow-700 font-medium transition-colors cursor-pointer">View
+                            More →</button>
                     </div>
                 </div>
 
-                <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 fade-in">
+                <div
+                    class="product-card bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 fade-in">
                     <div class="h-72 overflow-hidden bg-gray-50 flex items-center justify-center">
-                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="Modular Office Workstations" 
-                             class="max-w-full max-h-full object-contain hover:scale-105 transition-transform duration-300"
-                             onerror="this.src=''; this.alt='Modular Workstations - Image failed to load'; this.style.display='none';">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Modular Office Workstations"
+                            class="max-w-full max-h-full object-contain hover:scale-105 transition-transform duration-300"
+                            onerror="this.src=''; this.alt='Modular Workstations - Image failed to load'; this.style.display='none';">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-2">Modular Workstations</h3>
                         <p class="text-gray-600 mb-4">Flexible workspace solutions that adapt to your team's needs</p>
-                        <button onclick="showProductModal('modular-workstations')" class="text-yellow-600 hover:text-yellow-700 font-medium transition-colors cursor-pointer">View More →</button>
+                        <button onclick="showProductModal('modular-workstations')"
+                            class="text-yellow-600 hover:text-yellow-700 font-medium transition-colors cursor-pointer">View
+                            More →</button>
                     </div>
                 </div>
 
-                <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 fade-in">
+                <div
+                    class="product-card bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 fade-in">
                     <div class="h-72 overflow-hidden bg-gray-50 flex items-center justify-center">
-                        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="Conference Room Table" 
-                             class="max-w-full max-h-full object-contain hover:scale-105 transition-transform duration-300"
-                             onerror="this.src=''; this.alt='Conference Tables - Image failed to load'; this.style.display='none';">
+                        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Conference Room Table"
+                            class="max-w-full max-h-full object-contain hover:scale-105 transition-transform duration-300"
+                            onerror="this.src=''; this.alt='Conference Tables - Image failed to load'; this.style.display='none';">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-2">Conference Tables</h3>
                         <p class="text-gray-600 mb-4">Elegant meeting tables that inspire collaboration</p>
-                        <button onclick="showProductModal('conference-tables')" class="text-yellow-600 hover:text-yellow-700 font-medium transition-colors cursor-pointer">View More →</button>
+                        <button onclick="showProductModal('conference-tables')"
+                            class="text-yellow-600 hover:text-yellow-700 font-medium transition-colors cursor-pointer">View
+                            More →</button>
                     </div>
                 </div>
 
-                <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 fade-in">
+                <div
+                    class="product-card bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 fade-in">
                     <div class="h-72 overflow-hidden bg-gray-50 flex items-center justify-center">
-                        <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="Office Storage Solutions" 
-                             class="max-w-full max-h-full object-contain hover:scale-105 transition-transform duration-300"
-                             onerror="this.src=''; this.alt='Storage Solutions - Image failed to load'; this.style.display='none';">
+                        <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Office Storage Solutions"
+                            class="max-w-full max-h-full object-contain hover:scale-105 transition-transform duration-300"
+                            onerror="this.src=''; this.alt='Storage Solutions - Image failed to load'; this.style.display='none';">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-2">Storage Solutions</h3>
                         <p class="text-gray-600 mb-4">Smart storage systems to keep your office organized</p>
-                        <button onclick="showProductModal('storage-solutions')" class="text-yellow-600 hover:text-yellow-700 font-medium transition-colors cursor-pointer">View More →</button>
+                        <button onclick="showProductModal('storage-solutions')"
+                            class="text-yellow-600 hover:text-yellow-700 font-medium transition-colors cursor-pointer">View
+                            More →</button>
                     </div>
                 </div>
 
-                <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 fade-in">
+                <div
+                    class="product-card bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 fade-in">
                     <div class="h-72 overflow-hidden bg-gray-50 flex items-center justify-center">
-                        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="Modern Reception Desk" 
-                             class="max-w-full max-h-full object-contain hover:scale-105 transition-transform duration-300"
-                             onerror="this.src=''; this.alt='Reception Desks - Image failed to load'; this.style.display='none';">
+                        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Modern Reception Desk"
+                            class="max-w-full max-h-full object-contain hover:scale-105 transition-transform duration-300"
+                            onerror="this.src=''; this.alt='Reception Desks - Image failed to load'; this.style.display='none';">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-2">Reception Desks</h3>
                         <p class="text-gray-600 mb-4">Make a lasting first impression with our reception furniture</p>
-                        <button onclick="showProductModal('reception-desks')" class="text-yellow-600 hover:text-yellow-700 font-medium transition-colors cursor-pointer">View More →</button>
+                        <button onclick="showProductModal('reception-desks')"
+                            class="text-yellow-600 hover:text-yellow-700 font-medium transition-colors cursor-pointer">View
+                            More →</button>
                     </div>
                 </div>
 
-                <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 fade-in">
+                <div
+                    class="product-card bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 fade-in">
                     <div class="h-72 overflow-hidden bg-gray-50 flex items-center justify-center">
-                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="Office Lounge Seating" 
-                             class="max-w-full max-h-full object-contain hover:scale-105 transition-transform duration-300"
-                             onerror="this.src=''; this.alt='Lounge Furniture - Image failed to load'; this.style.display='none';">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Office Lounge Seating"
+                            class="max-w-full max-h-full object-contain hover:scale-105 transition-transform duration-300"
+                            onerror="this.src=''; this.alt='Lounge Furniture - Image failed to load'; this.style.display='none';">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-2">Lounge Furniture</h3>
                         <p class="text-gray-600 mb-4">Comfortable seating for break areas and informal meetings</p>
-                        <button onclick="showProductModal('lounge-furniture')" class="text-yellow-600 hover:text-yellow-700 font-medium transition-colors cursor-pointer">View More →</button>
+                        <button onclick="showProductModal('lounge-furniture')"
+                            class="text-yellow-600 hover:text-yellow-700 font-medium transition-colors cursor-pointer">View
+                            More →</button>
                     </div>
                 </div>
             </div>
@@ -313,9 +350,10 @@
                 <div class="w-24 h-1 bg-yellow-500 mx-auto mb-4"></div>
                 <p class="text-gray-600 max-w-2xl mx-auto">Tailored furniture solutions for diverse industry needs</p>
             </div>
-            
+
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="gallery-item h-64 rounded-lg bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center fade-in cursor-pointer hover:shadow-lg transition-all duration-300" onclick="showIndustryModal('corporate-offices')">
+                <div class="gallery-item h-64 rounded-lg bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center fade-in cursor-pointer hover:shadow-lg transition-all duration-300"
+                    onclick="showIndustryModal('corporate-offices')">
                     <div class="text-center text-blue-800">
                         <i class="fas fa-building text-4xl mb-2"></i>
                         <p class="font-semibold">Corporate Offices</p>
@@ -323,7 +361,8 @@
                         <p class="text-xs mt-2 opacity-75">Click to learn more →</p>
                     </div>
                 </div>
-                <div class="gallery-item h-64 rounded-lg bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center fade-in cursor-pointer hover:shadow-lg transition-all duration-300" onclick="showIndustryModal('coworking-spaces')">
+                <div class="gallery-item h-64 rounded-lg bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center fade-in cursor-pointer hover:shadow-lg transition-all duration-300"
+                    onclick="showIndustryModal('coworking-spaces')">
                     <div class="text-center text-green-800">
                         <i class="fas fa-users text-4xl mb-2"></i>
                         <p class="font-semibold">Co-working Spaces</p>
@@ -331,7 +370,8 @@
                         <p class="text-xs mt-2 opacity-75">Click to learn more →</p>
                     </div>
                 </div>
-                <div class="gallery-item h-64 rounded-lg bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center fade-in cursor-pointer hover:shadow-lg transition-all duration-300" onclick="showIndustryModal('tech-startups')">
+                <div class="gallery-item h-64 rounded-lg bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center fade-in cursor-pointer hover:shadow-lg transition-all duration-300"
+                    onclick="showIndustryModal('tech-startups')">
                     <div class="text-center text-purple-800">
                         <i class="fas fa-laptop text-4xl mb-2"></i>
                         <p class="font-semibold">Tech Startups</p>
@@ -339,7 +379,8 @@
                         <p class="text-xs mt-2 opacity-75">Click to learn more →</p>
                     </div>
                 </div>
-                <div class="gallery-item h-64 rounded-lg bg-gradient-to-br from-red-100 to-red-200 flex items-center justify-center fade-in cursor-pointer hover:shadow-lg transition-all duration-300" onclick="showIndustryModal('healthcare-facilities')">
+                <div class="gallery-item h-64 rounded-lg bg-gradient-to-br from-red-100 to-red-200 flex items-center justify-center fade-in cursor-pointer hover:shadow-lg transition-all duration-300"
+                    onclick="showIndustryModal('healthcare-facilities')">
                     <div class="text-center text-red-800">
                         <i class="fas fa-hospital text-4xl mb-2"></i>
                         <p class="font-semibold">Healthcare Facilities</p>
@@ -347,7 +388,8 @@
                         <p class="text-xs mt-2 opacity-75">Click to learn more →</p>
                     </div>
                 </div>
-                <div class="gallery-item h-64 rounded-lg bg-gradient-to-br from-yellow-100 to-yellow-200 flex items-center justify-center fade-in cursor-pointer hover:shadow-lg transition-all duration-300" onclick="showIndustryModal('educational-institutes')">
+                <div class="gallery-item h-64 rounded-lg bg-gradient-to-br from-yellow-100 to-yellow-200 flex items-center justify-center fade-in cursor-pointer hover:shadow-lg transition-all duration-300"
+                    onclick="showIndustryModal('educational-institutes')">
                     <div class="text-center text-yellow-800">
                         <i class="fas fa-graduation-cap text-4xl mb-2"></i>
                         <p class="font-semibold">Educational Institutes</p>
@@ -355,7 +397,8 @@
                         <p class="text-xs mt-2 opacity-75">Click to learn more →</p>
                     </div>
                 </div>
-                <div class="gallery-item h-64 rounded-lg bg-gradient-to-br from-indigo-100 to-indigo-200 flex items-center justify-center fade-in cursor-pointer hover:shadow-lg transition-all duration-300" onclick="showIndustryModal('law-firms')">
+                <div class="gallery-item h-64 rounded-lg bg-gradient-to-br from-indigo-100 to-indigo-200 flex items-center justify-center fade-in cursor-pointer hover:shadow-lg transition-all duration-300"
+                    onclick="showIndustryModal('law-firms')">
                     <div class="text-center text-indigo-800">
                         <i class="fas fa-gavel text-4xl mb-2"></i>
                         <p class="font-semibold">Law Firms</p>
@@ -375,117 +418,132 @@
                 <div class="w-24 h-1 bg-yellow-500 mx-auto mb-4"></div>
                 <p class="text-gray-600 max-w-2xl mx-auto">Explore our premium office furniture collection</p>
             </div>
-            
+
             <!-- Initial Gallery Grid -->
             <div id="initial-gallery" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="gallery-item h-64 md:h-80 rounded-lg overflow-hidden cursor-pointer fade-in" onclick="openImageModal(this)">
-                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                         alt="Executive Office Chair - Premium ergonomic seating" 
-                         class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                         onerror="this.src=''; this.alt='Executive Chair - Image failed to load'; this.style.display='none';">
+                <div class="gallery-item h-64 md:h-80 rounded-lg overflow-hidden cursor-pointer fade-in"
+                    onclick="openImageModal(this)">
+                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Executive Office Chair - Premium ergonomic seating"
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        onerror="this.src=''; this.alt='Executive Chair - Image failed to load'; this.style.display='none';">
                 </div>
-                <div class="gallery-item h-64 md:h-80 rounded-lg overflow-hidden cursor-pointer fade-in" onclick="openImageModal(this)">
-                    <img src="https://images.unsplash.com/photo-1541558869434-2840d308329a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                         alt="Modern Office Workstation - Flexible workspace solutions" 
-                         class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                         onerror="this.src=''; this.alt='Modern Workstation - Image failed to load'; this.style.display='none';">
+                <div class="gallery-item h-64 md:h-80 rounded-lg overflow-hidden cursor-pointer fade-in"
+                    onclick="openImageModal(this)">
+                    <img src="https://images.unsplash.com/photo-1541558869434-2840d308329a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Modern Office Workstation - Flexible workspace solutions"
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        onerror="this.src=''; this.alt='Modern Workstation - Image failed to load'; this.style.display='none';">
                 </div>
-                <div class="gallery-item h-64 md:h-80 rounded-lg overflow-hidden cursor-pointer fade-in" onclick="openImageModal(this)">
-                    <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                         alt="Conference Table - Professional meeting furniture" 
-                         class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                         onerror="this.src=''; this.alt='Conference Table - Image failed to load'; this.style.display='none';">
+                <div class="gallery-item h-64 md:h-80 rounded-lg overflow-hidden cursor-pointer fade-in"
+                    onclick="openImageModal(this)">
+                    <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Conference Table - Professional meeting furniture"
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        onerror="this.src=''; this.alt='Conference Table - Image failed to load'; this.style.display='none';">
                 </div>
-                <div class="gallery-item h-64 md:h-80 rounded-lg overflow-hidden cursor-pointer fade-in" onclick="openImageModal(this)">
-                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                         alt="Office Storage Solutions - Organized workspace storage" 
-                         class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                         onerror="this.src=''; this.alt='Storage Solutions - Image failed to load'; this.style.display='none';">
+                <div class="gallery-item h-64 md:h-80 rounded-lg overflow-hidden cursor-pointer fade-in"
+                    onclick="openImageModal(this)">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Office Storage Solutions - Organized workspace storage"
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        onerror="this.src=''; this.alt='Storage Solutions - Image failed to load'; this.style.display='none';">
                 </div>
-                <div class="gallery-item h-64 md:h-80 rounded-lg overflow-hidden cursor-pointer fade-in" onclick="openImageModal(this)">
-                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                         alt="Reception Desk - Make a great first impression" 
-                         class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                         onerror="this.src=''; this.alt='Reception Desk - Image failed to load'; this.style.display='none';">
+                <div class="gallery-item h-64 md:h-80 rounded-lg overflow-hidden cursor-pointer fade-in"
+                    onclick="openImageModal(this)">
+                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Reception Desk - Make a great first impression"
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        onerror="this.src=''; this.alt='Reception Desk - Image failed to load'; this.style.display='none';">
                 </div>
-                <div class="gallery-item h-64 md:h-80 rounded-lg overflow-hidden cursor-pointer fade-in" onclick="openImageModal(this)">
-                    <img src="https://images.unsplash.com/photo-1541558869434-2840d308329a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                         alt="Lounge Furniture - Comfortable break areas" 
-                         class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                         onerror="this.src=''; this.alt='Lounge Furniture - Image failed to load'; this.style.display='none';">
+                <div class="gallery-item h-64 md:h-80 rounded-lg overflow-hidden cursor-pointer fade-in"
+                    onclick="openImageModal(this)">
+                    <img src="https://images.unsplash.com/photo-1541558869434-2840d308329a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Lounge Furniture - Comfortable break areas"
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        onerror="this.src=''; this.alt='Lounge Furniture - Image failed to load'; this.style.display='none';">
                 </div>
             </div>
-            
+
             <!-- View More Button -->
             <div id="view-more-btn" class="text-center mt-8 fade-in">
-                <button onclick="showMoreGallery()" 
-                        class="bg-yellow-500 hover:bg-yellow-600 text-black px-8 py-3 rounded-lg font-semibold transition-colors">
+                <button onclick="showMoreGallery()"
+                    class="bg-yellow-500 hover:bg-yellow-600 text-black px-8 py-3 rounded-lg font-semibold transition-colors">
                     View More Photos →
                 </button>
             </div>
-            
+
             <!-- Additional Gallery Grid (Hidden initially) -->
             <div id="additional-gallery" class="hidden mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="gallery-item h-64 md:h-80 rounded-lg overflow-hidden cursor-pointer fade-in" onclick="openImageModal(this)">
-                    <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                         alt="Ergonomic Chair Design - Advanced comfort features" 
-                         class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                         onerror="this.src=''; this.alt='Ergonomic Chair - Image failed to load'; this.style.display='none';">
+                <div class="gallery-item h-64 md:h-80 rounded-lg overflow-hidden cursor-pointer fade-in"
+                    onclick="openImageModal(this)">
+                    <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Ergonomic Chair Design - Advanced comfort features"
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        onerror="this.src=''; this.alt='Ergonomic Chair - Image failed to load'; this.style.display='none';">
                 </div>
-                <div class="gallery-item h-64 md:h-80 rounded-lg overflow-hidden cursor-pointer fade-in" onclick="openImageModal(this)">
-                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                         alt="Complete Office Setup - Full workspace solutions" 
-                         class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                         onerror="this.src=''; this.alt='Office Setup - Image failed to load'; this.style.display='none';">
+                <div class="gallery-item h-64 md:h-80 rounded-lg overflow-hidden cursor-pointer fade-in"
+                    onclick="openImageModal(this)">
+                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Complete Office Setup - Full workspace solutions"
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        onerror="this.src=''; this.alt='Office Setup - Image failed to load'; this.style.display='none';">
                 </div>
-                <div class="gallery-item h-64 md:h-80 rounded-lg overflow-hidden cursor-pointer fade-in" onclick="openImageModal(this)">
-                    <img src="https://images.unsplash.com/photo-1541558869434-2840d308329a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                         alt="Modern Office Interior - Contemporary workspace design" 
-                         class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                         onerror="this.src=''; this.alt='Office Interior - Image failed to load'; this.style.display='none';">
+                <div class="gallery-item h-64 md:h-80 rounded-lg overflow-hidden cursor-pointer fade-in"
+                    onclick="openImageModal(this)">
+                    <img src="https://images.unsplash.com/photo-1541558869434-2840d308329a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Modern Office Interior - Contemporary workspace design"
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        onerror="this.src=''; this.alt='Office Interior - Image failed to load'; this.style.display='none';">
                 </div>
-                <div class="gallery-item h-64 md:h-80 rounded-lg overflow-hidden cursor-pointer fade-in" onclick="openImageModal(this)">
-                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                         alt="Executive Office Suite - Premium workspace design" 
-                         class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                         onerror="this.src=''; this.alt='Executive Suite - Image failed to load'; this.style.display='none';">
+                <div class="gallery-item h-64 md:h-80 rounded-lg overflow-hidden cursor-pointer fade-in"
+                    onclick="openImageModal(this)">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Executive Office Suite - Premium workspace design"
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        onerror="this.src=''; this.alt='Executive Suite - Image failed to load'; this.style.display='none';">
                 </div>
-                <div class="gallery-item h-64 md:h-80 rounded-lg overflow-hidden cursor-pointer fade-in" onclick="openImageModal(this)">
-                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                         alt="Collaborative Workspace - Team-focused furniture" 
-                         class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                         onerror="this.src=''; this.alt='Collaborative Workspace - Image failed to load'; this.style.display='none';">
+                <div class="gallery-item h-64 md:h-80 rounded-lg overflow-hidden cursor-pointer fade-in"
+                    onclick="openImageModal(this)">
+                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Collaborative Workspace - Team-focused furniture"
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        onerror="this.src=''; this.alt='Collaborative Workspace - Image failed to load'; this.style.display='none';">
                 </div>
-                <div class="gallery-item h-64 md:h-80 rounded-lg overflow-hidden cursor-pointer fade-in" onclick="openImageModal(this)">
-                    <img src="https://images.unsplash.com/photo-1541558869434-2840d308329a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                         alt="Modern Reception Area - First impression furniture" 
-                         class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                         onerror="this.src=''; this.alt='Reception Area - Image failed to load'; this.style.display='none';">
+                <div class="gallery-item h-64 md:h-80 rounded-lg overflow-hidden cursor-pointer fade-in"
+                    onclick="openImageModal(this)">
+                    <img src="https://images.unsplash.com/photo-1541558869434-2840d308329a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Modern Reception Area - First impression furniture"
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        onerror="this.src=''; this.alt='Reception Area - Image failed to load'; this.style.display='none';">
                 </div>
-                <div class="gallery-item h-64 md:h-80 rounded-lg overflow-hidden cursor-pointer fade-in" onclick="openImageModal(this)">
-                    <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                         alt="Ergonomic Workstation - Health-focused design" 
-                         class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                         onerror="this.src=''; this.alt='Ergonomic Workstation - Image failed to load'; this.style.display='none';">
+                <div class="gallery-item h-64 md:h-80 rounded-lg overflow-hidden cursor-pointer fade-in"
+                    onclick="openImageModal(this)">
+                    <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Ergonomic Workstation - Health-focused design"
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        onerror="this.src=''; this.alt='Ergonomic Workstation - Image failed to load'; this.style.display='none';">
                 </div>
-                <div class="gallery-item h-64 md:h-80 rounded-lg overflow-hidden cursor-pointer fade-in" onclick="openImageModal(this)">
-                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                         alt="Conference Room Setup - Professional meeting space" 
-                         class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                         onerror="this.src=''; this.alt='Conference Room - Image failed to load'; this.style.display='none';">
+                <div class="gallery-item h-64 md:h-80 rounded-lg overflow-hidden cursor-pointer fade-in"
+                    onclick="openImageModal(this)">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Conference Room Setup - Professional meeting space"
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        onerror="this.src=''; this.alt='Conference Room - Image failed to load'; this.style.display='none';">
                 </div>
-                <div class="gallery-item h-64 md:h-80 rounded-lg overflow-hidden cursor-pointer fade-in" onclick="openImageModal(this)">
-                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                         alt="Storage Solutions - Organized office systems" 
-                         class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                         onerror="this.src=''; this.alt='Storage Solutions - Image failed to load'; this.style.display='none';">
+                <div class="gallery-item h-64 md:h-80 rounded-lg overflow-hidden cursor-pointer fade-in"
+                    onclick="openImageModal(this)">
+                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Storage Solutions - Organized office systems"
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        onerror="this.src=''; this.alt='Storage Solutions - Image failed to load'; this.style.display='none';">
                 </div>
             </div>
-            
+
             <!-- Show Less Button (Hidden initially) -->
             <div id="show-less-btn" class="hidden text-center mt-8">
-                <button onclick="showLessGallery()" 
-                        class="border-2 border-yellow-500 text-yellow-600 hover:bg-yellow-500 hover:text-black px-8 py-3 rounded-lg font-semibold transition-colors">
+                <button onclick="showLessGallery()"
+                    class="border-2 border-yellow-500 text-yellow-600 hover:bg-yellow-500 hover:text-black px-8 py-3 rounded-lg font-semibold transition-colors">
                     ← Show Less
                 </button>
             </div>
@@ -498,47 +556,54 @@
             <div class="text-center mb-16 fade-in">
                 <h2 class="text-4xl font-light mb-4">Custom Design Process</h2>
                 <div class="w-24 h-1 bg-yellow-500 mx-auto mb-4"></div>
-                <p class="text-gray-600 max-w-2xl mx-auto">From concept to delivery, we work closely with you to create the perfect office environment</p>
+                <p class="text-gray-600 max-w-2xl mx-auto">From concept to delivery, we work closely with you to create
+                    the perfect office environment</p>
             </div>
-            
+
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="text-center fade-in">
-                    <div class="w-20 h-20 mx-auto mb-6 bg-yellow-500 text-white rounded-full flex items-center justify-center text-2xl font-bold">
+                    <div
+                        class="w-20 h-20 mx-auto mb-6 bg-yellow-500 text-white rounded-full flex items-center justify-center text-2xl font-bold">
                         1
                     </div>
                     <h3 class="text-xl font-semibold mb-4">Discuss</h3>
                     <div class="w-12 h-12 mx-auto mb-4 text-gray-400">
                         <i class="fas fa-comments text-3xl"></i>
                     </div>
-                    <p class="text-gray-600">We understand your needs, space requirements, and design preferences through detailed consultation</p>
+                    <p class="text-gray-600">We understand your needs, space requirements, and design preferences
+                        through detailed consultation</p>
                 </div>
-                
+
                 <div class="text-center fade-in">
-                    <div class="w-20 h-20 mx-auto mb-6 bg-yellow-500 text-white rounded-full flex items-center justify-center text-2xl font-bold">
+                    <div
+                        class="w-20 h-20 mx-auto mb-6 bg-yellow-500 text-white rounded-full flex items-center justify-center text-2xl font-bold">
                         2
                     </div>
                     <h3 class="text-xl font-semibold mb-4">Design</h3>
                     <div class="w-12 h-12 mx-auto mb-4 text-gray-400">
                         <i class="fas fa-drafting-compass text-3xl"></i>
                     </div>
-                    <p class="text-gray-600">Our expert designers create custom solutions with 3D visualizations and detailed specifications</p>
+                    <p class="text-gray-600">Our expert designers create custom solutions with 3D visualizations and
+                        detailed specifications</p>
                 </div>
-                
+
                 <div class="text-center fade-in">
-                    <div class="w-20 h-20 mx-auto mb-6 bg-yellow-500 text-white rounded-full flex items-center justify-center text-2xl font-bold">
+                    <div
+                        class="w-20 h-20 mx-auto mb-6 bg-yellow-500 text-white rounded-full flex items-center justify-center text-2xl font-bold">
                         3
                     </div>
                     <h3 class="text-xl font-semibold mb-4">Deliver</h3>
                     <div class="w-12 h-12 mx-auto mb-4 text-gray-400">
                         <i class="fas fa-truck text-3xl"></i>
                     </div>
-                    <p class="text-gray-600">We manufacture and deliver your custom furniture with professional installation and support</p>
+                    <p class="text-gray-600">We manufacture and deliver your custom furniture with professional
+                        installation and support</p>
                 </div>
             </div>
-            
+
             <div class="text-center mt-12 fade-in">
-                <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" 
-                        class="bg-yellow-500 hover:bg-yellow-600 text-black px-8 py-3 font-semibold rounded-lg transition-all duration-300">
+                <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})"
+                    class="bg-yellow-500 hover:bg-yellow-600 text-black px-8 py-3 font-semibold rounded-lg transition-all duration-300">
                     Start Your Custom Project
                 </button>
             </div>
@@ -553,12 +618,16 @@
                     <h2 class="text-4xl font-light mb-6">Your Trusted Office Furniture Manufacturer</h2>
                     <div class="w-24 h-1 bg-yellow-500 mb-6"></div>
                     <p class="text-gray-600 mb-6 text-lg leading-relaxed">
-                        Founded in 2018, Sun Office Furniture brings over 27 years of hands-on industry experience into every product we create. Our roots run deep in office furniture manufacturing — and our passion for ergonomic design, quality materials, and customer satisfaction drives everything we do.
+                        Founded in 2018, Sun Office Furniture brings over 27 years of hands-on industry experience into
+                        every product we create. Our roots run deep in office furniture manufacturing — and our passion
+                        for ergonomic design, quality materials, and customer satisfaction drives everything we do.
                     </p>
                     <p class="text-gray-600 mb-8 leading-relaxed">
-                        We specialize in high-performance office chairs, but our capabilities go far beyond seating. Whether you're furnishing a startup, corporate office, or co-working space, we offer customized furniture solutions tailored to your needs.
+                        We specialize in high-performance office chairs, but our capabilities go far beyond seating.
+                        Whether you're furnishing a startup, corporate office, or co-working space, we offer customized
+                        furniture solutions tailored to your needs.
                     </p>
-                    
+
                     <div class="mb-8">
                         <h3 class="text-xl font-semibold text-gray-900 mb-4">Why Choose Us?</h3>
                         <div class="space-y-3">
@@ -580,13 +649,14 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="bg-yellow-50 p-6 rounded-lg mb-8">
                         <p class="text-gray-800 text-lg font-medium italic">
-                            "Our mission is simple: to make workspaces better — one chair, one desk, one client at a time."
+                            "Our mission is simple: to make workspaces better — one chair, one desk, one client at a
+                            time."
                         </p>
                     </div>
-                    
+
                     <div class="grid grid-cols-2 gap-6">
                         <div class="text-center">
                             <div class="text-3xl font-bold text-yellow-600 mb-2">27+</div>
@@ -600,10 +670,9 @@
                 </div>
                 <div class="fade-in">
                     <div class="rounded-lg overflow-hidden h-96">
-                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
-                             alt="Manufacturing Facility" 
-                             class="w-full h-full object-cover"
-                             onerror="this.src=''; this.alt='Manufacturing Facility - Image failed to load'; this.style.display='none';">
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                            alt="Manufacturing Facility" class="w-full h-full object-cover"
+                            onerror="this.src=''; this.alt='Manufacturing Facility - Image failed to load'; this.style.display='none';">
                     </div>
                 </div>
             </div>
@@ -616,42 +685,52 @@
             <div class="text-center mb-8 fade-in">
                 <h2 class="text-3xl font-light mb-3">Insights & Expertise</h2>
                 <div class="w-24 h-1 bg-yellow-500 mx-auto mb-3"></div>
-                <p class="text-gray-600 max-w-2xl mx-auto">Discover the latest trends and tips in office furniture design</p>
+                <p class="text-gray-600 max-w-2xl mx-auto">Discover the latest trends and tips in office furniture
+                    design</p>
             </div>
-            
+
             <div class="grid lg:grid-cols-1 gap-4">
                 <!-- Blog Post 1 -->
                 <article class="bg-white rounded-lg shadow-lg overflow-hidden fade-in">
                     <div class="p-4">
                         <div class="mb-3">
-                            <span class="text-xs text-yellow-600 font-semibold uppercase tracking-wide">Industry Solutions</span>
-                            <h3 class="text-lg font-bold text-gray-900 mt-1 mb-2">Office Furniture Solutions Tailored for Every Industry</h3>
-                            <p class="text-gray-600 text-sm">By Sun Office Furniture • December 22, 2024 • 6 min read</p>
+                            <span class="text-xs text-yellow-600 font-semibold uppercase tracking-wide">Industry
+                                Solutions</span>
+                            <h3 class="text-lg font-bold text-gray-900 mt-1 mb-2">Office Furniture Solutions Tailored
+                                for Every Industry</h3>
+                            <p class="text-gray-600 text-sm">By Sun Office Furniture • December 22, 2024 • 6 min read
+                            </p>
                         </div>
-                        
+
                         <div class="blog-preview">
                             <p class="text-gray-700 leading-relaxed mb-3">
-                                Not all workspaces are created equal—neither should their furniture be. At Sun Office Furniture, we understand that different industries have unique functional, aesthetic, and space requirements.
+                                Not all workspaces are created equal—neither should their furniture be. At Sun Office
+                                Furniture, we understand that different industries have unique functional, aesthetic,
+                                and space requirements.
                             </p>
-                            
-                            <button class="read-more-btn text-yellow-600 hover:text-yellow-700 font-medium transition-colors">
+
+                            <button
+                                class="read-more-btn text-yellow-600 hover:text-yellow-700 font-medium transition-colors">
                                 Read Full Article →
                             </button>
                         </div>
-                        
+
                         <div class="blog-full-content hidden">
                             <p class="text-gray-700 leading-relaxed mb-4">
-                                Not all workspaces are created equal—neither should their furniture be. At Sun Office Furniture, we understand that different industries have unique functional, aesthetic, and space requirements.
+                                Not all workspaces are created equal—neither should their furniture be. At Sun Office
+                                Furniture, we understand that different industries have unique functional, aesthetic,
+                                and space requirements.
                             </p>
-                            
+
                             <p class="text-gray-700 leading-relaxed mb-4">
-                                That's why we design and manufacture industry-specific furniture solutions to match real-world needs.
+                                That's why we design and manufacture industry-specific furniture solutions to match
+                                real-world needs.
                             </p>
-                            
+
                             <p class="text-gray-700 leading-relaxed mb-4">
                                 Here's a breakdown of how we tailor our products to serve various sectors:
                             </p>
-                            
+
                             <h4 class="font-semibold text-gray-900 mb-3">🏢 1. Corporate Offices</h4>
                             <p class="text-gray-700 leading-relaxed mb-3">
                                 <strong>Focus:</strong> Ergonomics, Collaboration, Aesthetics
@@ -665,9 +744,10 @@
                                 <li>Support long working hours with ergonomic seating</li>
                             </ul>
                             <p class="text-gray-700 leading-relaxed mb-4">
-                                From CEO cabins to breakout zones, we offer complete fit-outs with matching design elements.
+                                From CEO cabins to breakout zones, we offer complete fit-outs with matching design
+                                elements.
                             </p>
-                            
+
                             <h4 class="font-semibold text-gray-900 mb-3">📚 2. Educational Institutions</h4>
                             <p class="text-gray-700 leading-relaxed mb-3">
                                 <strong>Focus:</strong> Durability, Space Management, Flexibility
@@ -681,9 +761,10 @@
                                 <li>Study-friendly, sturdy materials</li>
                             </ul>
                             <p class="text-gray-700 leading-relaxed mb-4">
-                                Our classroom furniture is kid-safe, easy to maintain, and designed to last through daily use.
+                                Our classroom furniture is kid-safe, easy to maintain, and designed to last through
+                                daily use.
                             </p>
-                            
+
                             <h4 class="font-semibold text-gray-900 mb-3">🏥 3. Healthcare & Clinics</h4>
                             <p class="text-gray-700 leading-relaxed mb-3">
                                 <strong>Focus:</strong> Hygiene, Accessibility, Compact Design
@@ -697,9 +778,10 @@
                                 <li>Compact storage units</li>
                             </ul>
                             <p class="text-gray-700 leading-relaxed mb-4">
-                                We use anti-bacterial, stain-resistant materials and prioritize easy mobility and space efficiency.
+                                We use anti-bacterial, stain-resistant materials and prioritize easy mobility and space
+                                efficiency.
                             </p>
-                            
+
                             <h4 class="font-semibold text-gray-900 mb-3">🛍 4. Retail & Showrooms</h4>
                             <p class="text-gray-700 leading-relaxed mb-3">
                                 <strong>Focus:</strong> Style, Customer Experience, Space Utilization
@@ -712,7 +794,7 @@
                                 <li>Display furniture</li>
                                 <li>Custom seating for staff and customers</li>
                             </ul>
-                            
+
                             <h4 class="font-semibold text-gray-900 mb-3">💡 5. Co-Working Spaces & Startups</h4>
                             <p class="text-gray-700 leading-relaxed mb-3">
                                 <strong>Focus:</strong> Flexibility, Budget, Trendy Designs
@@ -725,19 +807,23 @@
                                 <li>Modular workstations</li>
                                 <li>Fun, modern furniture that adapts to team growth</li>
                             </ul>
-                            
+
                             <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded-lg mb-4">
                                 <h4 class="font-semibold text-gray-900 mb-2">🎯 We Design for YOUR Industry</h4>
                                 <p class="text-gray-700 leading-relaxed mb-3">
-                                    At Sun Office Furniture, we offer customized furniture planning, design, and manufacturing for any sector. With over two decades of experience, we understand that the right furniture doesn't just fill a space—it empowers it.
+                                    At Sun Office Furniture, we offer customized furniture planning, design, and
+                                    manufacturing for any sector. With over two decades of experience, we understand
+                                    that the right furniture doesn't just fill a space—it empowers it.
                                 </p>
                                 <p class="text-gray-700 font-medium">
-                                    Let us help you furnish your industry. Contact us for bulk quotes, layout advice, or custom builds.
+                                    Let us help you furnish your industry. Contact us for bulk quotes, layout advice, or
+                                    custom builds.
                                 </p>
                             </div>
-                            
+
                             <div class="mt-6 text-center">
-                                <button class="collapse-btn border-2 border-gray-300 text-gray-600 hover:border-yellow-500 hover:text-yellow-600 px-6 py-3 rounded-lg font-semibold transition-colors">
+                                <button
+                                    class="collapse-btn border-2 border-gray-300 text-gray-600 hover:border-yellow-500 hover:text-yellow-600 px-6 py-3 rounded-lg font-semibold transition-colors">
                                     ← Show Less
                                 </button>
                             </div>
@@ -749,38 +835,51 @@
                 <article class="bg-white rounded-lg shadow-lg overflow-hidden fade-in">
                     <div class="p-4">
                         <div class="mb-3">
-                            <span class="text-xs text-yellow-600 font-semibold uppercase tracking-wide">Ergonomics</span>
-                            <h3 class="text-lg font-bold text-gray-900 mt-1 mb-2">5 Features Every Ergonomic Office Chair Must Have</h3>
-                            <p class="text-gray-600 text-sm">By Sun Office Furniture • December 20, 2024 • 5 min read</p>
+                            <span
+                                class="text-xs text-yellow-600 font-semibold uppercase tracking-wide">Ergonomics</span>
+                            <h3 class="text-lg font-bold text-gray-900 mt-1 mb-2">5 Features Every Ergonomic Office
+                                Chair Must Have</h3>
+                            <p class="text-gray-600 text-sm">By Sun Office Furniture • December 20, 2024 • 5 min read
+                            </p>
                         </div>
-                        
+
                         <div class="blog-preview">
                             <p class="text-gray-700 leading-relaxed mb-3">
-                                Whether you work from a corporate office or a home setup, your chair is the one piece of furniture you spend the most time in. Discover the essential features that make a chair truly ergonomic.
+                                Whether you work from a corporate office or a home setup, your chair is the one piece of
+                                furniture you spend the most time in. Discover the essential features that make a chair
+                                truly ergonomic.
                             </p>
-                            
-                            <button class="read-more-btn text-yellow-600 hover:text-yellow-700 font-medium transition-colors">
+
+                            <button
+                                class="read-more-btn text-yellow-600 hover:text-yellow-700 font-medium transition-colors">
                                 Read Full Article →
                             </button>
                         </div>
-                        
+
                         <div class="blog-full-content hidden">
                             <p class="text-gray-700 leading-relaxed mb-4">
-                                Whether you work from a corporate office or a home setup, your chair is the one piece of furniture you spend the most time in. A good chair isn't just about comfort—it's about health, productivity, and performance. That's where ergonomic office chairs come in.
+                                Whether you work from a corporate office or a home setup, your chair is the one piece of
+                                furniture you spend the most time in. A good chair isn't just about comfort—it's about
+                                health, productivity, and performance. That's where ergonomic office chairs come in.
                             </p>
-                            
+
                             <p class="text-gray-700 leading-relaxed mb-4">
-                                At Sun Office Furniture, we've spent over 27 years perfecting the science of seating. Here are the 5 essential features every ergonomic office chair must have—and why they matter.
+                                At Sun Office Furniture, we've spent over 27 years perfecting the science of seating.
+                                Here are the 5 essential features every ergonomic office chair must have—and why they
+                                matter.
                             </p>
-                            
+
                             <h4 class="font-semibold text-gray-900 mb-3">⬛ 1. Adjustable Lumbar Support</h4>
                             <p class="text-gray-700 leading-relaxed mb-4">
-                                Lower back pain is one of the most common complaints among office workers. A truly ergonomic chair includes adjustable lumbar support, which helps maintain the natural curve of your spine and reduces strain during long hours of sitting.
+                                Lower back pain is one of the most common complaints among office workers. A truly
+                                ergonomic chair includes adjustable lumbar support, which helps maintain the natural
+                                curve of your spine and reduces strain during long hours of sitting.
                             </p>
                             <div class="bg-yellow-50 p-3 rounded-lg mb-4">
-                                <p class="text-gray-800 text-sm"><strong>Tip:</strong> Look for chairs that let you move the lumbar support up/down and in/out for a personalized fit.</p>
+                                <p class="text-gray-800 text-sm"><strong>Tip:</strong> Look for chairs that let you move
+                                    the lumbar support up/down and in/out for a personalized fit.</p>
                             </div>
-                            
+
                             <h4 class="font-semibold text-gray-900 mb-3">⬛ 2. Seat Height & Depth Adjustment</h4>
                             <p class="text-gray-700 leading-relaxed mb-3">
                                 Everyone's body is different. That's why your chair must allow you to:
@@ -790,23 +889,30 @@
                                 <li>Adjust seat depth (to avoid pressure behind the knees)</li>
                             </ul>
                             <p class="text-gray-700 leading-relaxed mb-4">
-                                This ensures proper blood circulation and comfort, especially during extended work sessions.
+                                This ensures proper blood circulation and comfort, especially during extended work
+                                sessions.
                             </p>
                             <div class="bg-green-50 p-3 rounded-lg mb-4">
-                                <p class="text-gray-800 text-sm"><strong>Pro Feature:</strong> A waterfall seat edge that slopes down reduces pressure on the thighs.</p>
+                                <p class="text-gray-800 text-sm"><strong>Pro Feature:</strong> A waterfall seat edge
+                                    that slopes down reduces pressure on the thighs.</p>
                             </div>
-                            
+
                             <h4 class="font-semibold text-gray-900 mb-3">⬛ 3. Breathable Mesh or Quality Upholstery</h4>
                             <p class="text-gray-700 leading-relaxed mb-4">
-                                Ergonomic chairs should not only support your posture but also regulate your temperature. Breathable mesh backs allow airflow and prevent sweat buildup. If you prefer upholstered chairs, ensure they're made of moisture-resistant, high-density fabric or PU leather.
+                                Ergonomic chairs should not only support your posture but also regulate your
+                                temperature. Breathable mesh backs allow airflow and prevent sweat buildup. If you
+                                prefer upholstered chairs, ensure they're made of moisture-resistant, high-density
+                                fabric or PU leather.
                             </p>
                             <p class="text-gray-700 leading-relaxed mb-4">
-                                At Sun Office Furniture, we use premium-grade mesh and upholstery tested for durability and comfort.
+                                At Sun Office Furniture, we use premium-grade mesh and upholstery tested for durability
+                                and comfort.
                             </p>
-                            
+
                             <h4 class="font-semibold text-gray-900 mb-3">⬛ 4. Adjustable Armrests</h4>
                             <p class="text-gray-700 leading-relaxed mb-3">
-                                Incorrect arm positioning can cause shoulder and neck tension. Good ergonomic chairs offer 2D or 3D adjustable armrests, letting you change:
+                                Incorrect arm positioning can cause shoulder and neck tension. Good ergonomic chairs
+                                offer 2D or 3D adjustable armrests, letting you change:
                             </p>
                             <ul class="list-disc list-inside text-gray-700 mb-4 space-y-1">
                                 <li>Height</li>
@@ -816,10 +922,11 @@
                             <p class="text-gray-700 leading-relaxed mb-4">
                                 This supports your forearms during typing and mouse use, reducing fatigue.
                             </p>
-                            
+
                             <h4 class="font-semibold text-gray-900 mb-3">⬛ 5. Recline & Tilt Lock Mechanism</h4>
                             <p class="text-gray-700 leading-relaxed mb-3">
-                                A fixed sitting posture for 8+ hours? That's a recipe for burnout. An ergonomic chair must have a synchro tilt mechanism with:
+                                A fixed sitting posture for 8+ hours? That's a recipe for burnout. An ergonomic chair
+                                must have a synchro tilt mechanism with:
                             </p>
                             <ul class="list-disc list-inside text-gray-700 mb-4 space-y-1">
                                 <li>Multiple tilt lock positions</li>
@@ -827,18 +934,23 @@
                                 <li>Adjustable tension control</li>
                             </ul>
                             <p class="text-gray-700 leading-relaxed mb-4">
-                                These features let you move and stretch while staying supported, helping prevent stiffness and fatigue.
+                                These features let you move and stretch while staying supported, helping prevent
+                                stiffness and fatigue.
                             </p>
-                            
+
                             <h4 class="font-semibold text-gray-900 mb-3">Bonus: Quality Wheels & 360° Swivel</h4>
                             <p class="text-gray-700 leading-relaxed mb-4">
-                                Don't overlook the base! Smooth-rolling casters and a strong, 360° swivel base allow easy movement and access to your workspace without overreaching or straining.
+                                Don't overlook the base! Smooth-rolling casters and a strong, 360° swivel base allow
+                                easy movement and access to your workspace without overreaching or straining.
                             </p>
-                            
+
                             <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded-lg mb-4">
-                                <h4 class="font-semibold text-gray-900 mb-2">● Why Choose Sun Office Furniture Ergonomic Chairs?</h4>
+                                <h4 class="font-semibold text-gray-900 mb-2">● Why Choose Sun Office Furniture Ergonomic
+                                    Chairs?</h4>
                                 <p class="text-gray-700 leading-relaxed mb-3">
-                                    At Sun Office Furniture, we combine engineering, comfort, and aesthetics to deliver chairs that truly work for you—not against you. Whether you need a single chair or bulk corporate orders, we provide custom-built ergonomic chairs with:
+                                    At Sun Office Furniture, we combine engineering, comfort, and aesthetics to deliver
+                                    chairs that truly work for you—not against you. Whether you need a single chair or
+                                    bulk corporate orders, we provide custom-built ergonomic chairs with:
                                 </p>
                                 <ul class="list-disc list-inside text-gray-700 space-y-1">
                                     <li>ISO-standard materials</li>
@@ -846,16 +958,17 @@
                                     <li>1-year warranty & post-sales support</li>
                                 </ul>
                             </div>
-                            
+
                             <div class="bg-green-50 p-4 rounded-lg mb-4">
                                 <h4 class="font-semibold text-gray-900 mb-2">⬛ Ready to Upgrade Your Seating?</h4>
                                 <p class="text-gray-700">
                                     Browse our range of ergonomic office chairs or contact us for a custom quote.
                                 </p>
                             </div>
-                            
+
                             <div class="mt-6 text-center">
-                                <button class="collapse-btn border-2 border-gray-300 text-gray-600 hover:border-yellow-500 hover:text-yellow-600 px-6 py-3 rounded-lg font-semibold transition-colors">
+                                <button
+                                    class="collapse-btn border-2 border-gray-300 text-gray-600 hover:border-yellow-500 hover:text-yellow-600 px-6 py-3 rounded-lg font-semibold transition-colors">
                                     ← Show Less
                                 </button>
                             </div>
@@ -867,67 +980,83 @@
                 <article class="bg-white rounded-lg shadow-lg overflow-hidden fade-in">
                     <div class="p-4">
                         <div class="mb-3">
-                            <span class="text-xs text-yellow-600 font-semibold uppercase tracking-wide">Business Tips</span>
-                            <h3 class="text-lg font-bold text-gray-900 mt-1 mb-2">Why Buying Office Furniture Direct from the Manufacturer Is a Smart Move</h3>
-                            <p class="text-gray-600 text-sm">By Sun Office Furniture • December 18, 2024 • 4 min read</p>
+                            <span class="text-xs text-yellow-600 font-semibold uppercase tracking-wide">Business
+                                Tips</span>
+                            <h3 class="text-lg font-bold text-gray-900 mt-1 mb-2">Why Buying Office Furniture Direct
+                                from the Manufacturer Is a Smart Move</h3>
+                            <p class="text-gray-600 text-sm">By Sun Office Furniture • December 18, 2024 • 4 min read
+                            </p>
                         </div>
-                        
+
                         <div class="blog-preview">
                             <p class="text-gray-700 leading-relaxed mb-3">
-                                Buying office furniture can be overwhelming—with so many brands, dealers, and middlemen, how do you make sure you're getting the best deal? The answer: buy direct from the manufacturer.
+                                Buying office furniture can be overwhelming—with so many brands, dealers, and middlemen,
+                                how do you make sure you're getting the best deal? The answer: buy direct from the
+                                manufacturer.
                             </p>
-                            
-                            <button class="read-more-btn text-yellow-600 hover:text-yellow-700 font-medium transition-colors">
+
+                            <button
+                                class="read-more-btn text-yellow-600 hover:text-yellow-700 font-medium transition-colors">
                                 Read Full Article →
                             </button>
                         </div>
-                        
+
                         <div class="blog-full-content hidden">
                             <p class="text-gray-700 leading-relaxed mb-4">
-                                Buying office furniture can be overwhelming—with so many brands, dealers, and middlemen, how do you make sure you're getting the best deal? The answer: buy direct from the manufacturer.
+                                Buying office furniture can be overwhelming—with so many brands, dealers, and middlemen,
+                                how do you make sure you're getting the best deal? The answer: buy direct from the
+                                manufacturer.
                             </p>
-                            
+
                             <p class="text-gray-700 leading-relaxed mb-4">
-                                Here's why working with a manufacturer like Sun Office Furniture makes a real difference.
+                                Here's why working with a manufacturer like Sun Office Furniture makes a real
+                                difference.
                             </p>
-                            
+
                             <h4 class="font-semibold text-gray-900 mb-3">1. Better Pricing, No Middleman</h4>
                             <p class="text-gray-700 leading-relaxed mb-4">
-                                When you buy direct, you eliminate distributor and retailer markups. That means more value for your money.
+                                When you buy direct, you eliminate distributor and retailer markups. That means more
+                                value for your money.
                             </p>
-                            
+
                             <h4 class="font-semibold text-gray-900 mb-3">2. Customization Options</h4>
                             <p class="text-gray-700 leading-relaxed mb-4">
-                                Need a desk that fits a corner perfectly? Want your brand colors on your chairs? Manufacturers offer tailored solutions that dealers often can't.
+                                Need a desk that fits a corner perfectly? Want your brand colors on your chairs?
+                                Manufacturers offer tailored solutions that dealers often can't.
                             </p>
-                            
+
                             <h4 class="font-semibold text-gray-900 mb-3">3. Consistent Quality</h4>
                             <p class="text-gray-700 leading-relaxed mb-4">
-                                At Sun Office Furniture, we oversee every step—from material sourcing to final packaging. You get guaranteed quality control and consistency.
+                                At Sun Office Furniture, we oversee every step—from material sourcing to final
+                                packaging. You get guaranteed quality control and consistency.
                             </p>
-                            
+
                             <h4 class="font-semibold text-gray-900 mb-3">4. Faster Turnaround Times</h4>
                             <p class="text-gray-700 leading-relaxed mb-4">
-                                No delays waiting for stock to come in. We produce on order, which means quicker delivery, especially for bulk needs.
+                                No delays waiting for stock to come in. We produce on order, which means quicker
+                                delivery, especially for bulk needs.
                             </p>
-                            
+
                             <h4 class="font-semibold text-gray-900 mb-3">5. Post-Sales Support</h4>
                             <p class="text-gray-700 leading-relaxed mb-4">
-                                Buying from the source gives you direct access to warranty services, replacements, or part upgrades, without jumping through reseller hoops.
+                                Buying from the source gives you direct access to warranty services, replacements, or
+                                part upgrades, without jumping through reseller hoops.
                             </p>
-                            
+
                             <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded-lg mb-4">
                                 <h4 class="font-semibold text-gray-900 mb-2">Need Bulk Furniture? Let's Talk.</h4>
                                 <p class="text-gray-700 leading-relaxed">
-                                    From startups to enterprise offices, we help businesses save time, money, and space with high-quality furniture, direct from the source.
+                                    From startups to enterprise offices, we help businesses save time, money, and space
+                                    with high-quality furniture, direct from the source.
                                 </p>
                                 <p class="text-gray-700 font-medium mt-2">
                                     Request a quote today. You'll feel the difference.
                                 </p>
                             </div>
-                            
+
                             <div class="mt-6 text-center">
-                                <button class="collapse-btn border-2 border-gray-300 text-gray-600 hover:border-yellow-500 hover:text-yellow-600 px-6 py-3 rounded-lg font-semibold transition-colors">
+                                <button
+                                    class="collapse-btn border-2 border-gray-300 text-gray-600 hover:border-yellow-500 hover:text-yellow-600 px-6 py-3 rounded-lg font-semibold transition-colors">
                                     ← Show Less
                                 </button>
                             </div>
@@ -939,37 +1068,46 @@
                 <article class="bg-white rounded-lg shadow-lg overflow-hidden fade-in">
                     <div class="p-4">
                         <div class="mb-3">
-                            <span class="text-xs text-yellow-600 font-semibold uppercase tracking-wide">Chair Excellence</span>
-                            <h3 class="text-lg font-bold text-gray-900 mt-1 mb-2">What Makes a Great Office Chair? A Deep Dive Into Ergonomic Excellence</h3>
-                            <p class="text-gray-600 text-sm">By Sun Office Furniture • December 16, 2024 • 4 min read</p>
+                            <span class="text-xs text-yellow-600 font-semibold uppercase tracking-wide">Chair
+                                Excellence</span>
+                            <h3 class="text-lg font-bold text-gray-900 mt-1 mb-2">What Makes a Great Office Chair? A
+                                Deep Dive Into Ergonomic Excellence</h3>
+                            <p class="text-gray-600 text-sm">By Sun Office Furniture • December 16, 2024 • 4 min read
+                            </p>
                         </div>
-                        
+
                         <div class="blog-preview">
                             <p class="text-gray-700 leading-relaxed mb-3">
-                                When it comes to productivity, comfort isn't a luxury—it's a necessity. And at the heart of a comfortable workspace is one essential item: the office chair.
+                                When it comes to productivity, comfort isn't a luxury—it's a necessity. And at the heart
+                                of a comfortable workspace is one essential item: the office chair.
                             </p>
-                            
-                            <button class="read-more-btn text-yellow-600 hover:text-yellow-700 font-medium transition-colors">
+
+                            <button
+                                class="read-more-btn text-yellow-600 hover:text-yellow-700 font-medium transition-colors">
                                 Read Full Article →
                             </button>
                         </div>
-                        
+
                         <div class="blog-full-content hidden">
                             <p class="text-gray-700 leading-relaxed mb-4">
-                                When it comes to productivity, comfort isn't a luxury—it's a necessity. And at the heart of a comfortable workspace is one essential item: the office chair.
+                                When it comes to productivity, comfort isn't a luxury—it's a necessity. And at the heart
+                                of a comfortable workspace is one essential item: the office chair.
                             </p>
-                            
+
                             <p class="text-gray-700 leading-relaxed mb-4">
-                                At Sun Office Furniture, office chairs are our specialty. We've been perfecting seating solutions for over 27 years, designing chairs that support the body, encourage good posture, and stand the test of time.
+                                At Sun Office Furniture, office chairs are our specialty. We've been perfecting seating
+                                solutions for over 27 years, designing chairs that support the body, encourage good
+                                posture, and stand the test of time.
                             </p>
-                            
+
                             <p class="text-gray-700 leading-relaxed mb-4">
                                 Here's what truly separates a great office chair from an average one:
                             </p>
-                            
+
                             <h4 class="font-semibold text-gray-900 mb-3">⬛ 1. Ergonomic Design</h4>
                             <p class="text-gray-700 leading-relaxed mb-3">
-                                A great chair follows the shape of the human body and promotes healthy posture. Features to look for:
+                                A great chair follows the shape of the human body and promotes healthy posture. Features
+                                to look for:
                             </p>
                             <ul class="list-disc list-inside text-gray-700 mb-4 space-y-1">
                                 <li>Contoured backrest with lumbar support</li>
@@ -977,9 +1115,10 @@
                                 <li>Adjustable recline to reduce spinal compression</li>
                             </ul>
                             <p class="text-gray-700 leading-relaxed mb-4">
-                                We build our chairs to support movement, not restrict it—keeping you energized throughout the workday.
+                                We build our chairs to support movement, not restrict it—keeping you energized
+                                throughout the workday.
                             </p>
-                            
+
                             <h4 class="font-semibold text-gray-900 mb-3">⬛ 2. Custom Adjustability</h4>
                             <p class="text-gray-700 leading-relaxed mb-3">
                                 No two bodies are the same. A good office chair offers:
@@ -993,12 +1132,14 @@
                             <p class="text-gray-700 leading-relaxed mb-4">
                                 These features help tailor your chair to your body—not the other way around.
                             </p>
-                            
+
                             <h4 class="font-semibold text-gray-900 mb-3">⬛ 3. Breathable Materials & Quality Build</h4>
                             <p class="text-gray-700 leading-relaxed mb-4">
-                                We use mesh backs for airflow, high-resilience foam for seat comfort, and strong bases for maximum durability. All our chairs undergo rigorous testing for weight, wear, and long-term usage.
+                                We use mesh backs for airflow, high-resilience foam for seat comfort, and strong bases
+                                for maximum durability. All our chairs undergo rigorous testing for weight, wear, and
+                                long-term usage.
                             </p>
-                            
+
                             <h4 class="font-semibold text-gray-900 mb-3">⬛ 4. Aesthetics & Branding</h4>
                             <p class="text-gray-700 leading-relaxed mb-3">
                                 You don't have to sacrifice style for function. Our chairs are available in:
@@ -1008,19 +1149,22 @@
                                 <li>Sleek mesh, premium PU, or genuine leather</li>
                                 <li>Custom branding (bulk orders available)</li>
                             </ul>
-                            
+
                             <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded-lg mb-4">
-                                <h4 class="font-semibold text-gray-900 mb-2">● From Startups to Corporates: We've Got Your Back (Literally!)</h4>
+                                <h4 class="font-semibold text-gray-900 mb-2">● From Startups to Corporates: We've Got
+                                    Your Back (Literally!)</h4>
                                 <p class="text-gray-700 leading-relaxed">
-                                    Whether you're buying one chair or 500, Sun Office Furniture delivers comfort, quality, and customization.
+                                    Whether you're buying one chair or 500, Sun Office Furniture delivers comfort,
+                                    quality, and customization.
                                 </p>
                                 <p class="text-gray-700 font-medium mt-2">
                                     Check out our full ergonomic chair collection or request a bulk quote today.
                                 </p>
                             </div>
-                            
+
                             <div class="mt-6 text-center">
-                                <button class="collapse-btn border-2 border-gray-300 text-gray-600 hover:border-yellow-500 hover:text-yellow-600 px-6 py-3 rounded-lg font-semibold transition-colors">
+                                <button
+                                    class="collapse-btn border-2 border-gray-300 text-gray-600 hover:border-yellow-500 hover:text-yellow-600 px-6 py-3 rounded-lg font-semibold transition-colors">
                                     ← Show Less
                                 </button>
                             </div>
@@ -1038,127 +1182,155 @@
             <div class="text-center mb-16 fade-in">
                 <h2 class="text-4xl font-light mb-4">Frequently Asked Questions</h2>
                 <div class="w-24 h-1 bg-yellow-500 mx-auto mb-4"></div>
-                <p class="text-gray-600 max-w-2xl mx-auto">Get answers to common questions about our products, services, and processes</p>
+                <p class="text-gray-600 max-w-2xl mx-auto">Get answers to common questions about our products, services,
+                    and processes</p>
             </div>
-            
+
             <div class="space-y-4">
                 <div class="faq-item bg-white rounded-lg shadow-sm border fade-in">
-                    <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
+                    <button
+                        class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
                         <span class="font-medium">Do you offer custom designs?</span>
                         <i class="fas fa-chevron-down transition-transform"></i>
                     </button>
                     <div class="faq-answer hidden px-6 pb-4">
-                        <p class="text-gray-600">Yes! We specialize in custom office furniture solutions to match your space, branding, and needs.</p>
+                        <p class="text-gray-600">Yes! We specialize in custom office furniture solutions to match your
+                            space, branding, and needs.</p>
                     </div>
                 </div>
-                
+
                 <div class="faq-item bg-white rounded-lg shadow-sm border fade-in">
-                    <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
+                    <button
+                        class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
                         <span class="font-medium">What is your delivery timeline?</span>
                         <i class="fas fa-chevron-down transition-transform"></i>
                     </button>
                     <div class="faq-answer hidden px-6 pb-4">
-                        <p class="text-gray-600">Typically 7–15 business days, depending on order size and customization.</p>
+                        <p class="text-gray-600">Typically 7–15 business days, depending on order size and
+                            customization.</p>
                     </div>
                 </div>
-                
+
                 <div class="faq-item bg-white rounded-lg shadow-sm border fade-in">
-                    <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
+                    <button
+                        class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
                         <span class="font-medium">Do you supply in bulk?</span>
                         <i class="fas fa-chevron-down transition-transform"></i>
                     </button>
                     <div class="faq-answer hidden px-6 pb-4">
-                        <p class="text-gray-600">Absolutely. We handle everything from small orders to full office setups.</p>
+                        <p class="text-gray-600">Absolutely. We handle everything from small orders to full office
+                            setups.</p>
                     </div>
                 </div>
-                
+
                 <div class="faq-item bg-white rounded-lg shadow-sm border fade-in">
-                    <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
+                    <button
+                        class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
                         <span class="font-medium">What types of materials do you use in your furniture?</span>
                         <i class="fas fa-chevron-down transition-transform"></i>
                     </button>
                     <div class="faq-answer hidden px-6 pb-4">
-                        <p class="text-gray-600">We use high-quality, durable materials including engineered wood, powder-coated metal, premium mesh, PU/leather, and certified foams to ensure long-lasting performance and comfort.</p>
+                        <p class="text-gray-600">We use high-quality, durable materials including engineered wood,
+                            powder-coated metal, premium mesh, PU/leather, and certified foams to ensure long-lasting
+                            performance and comfort.</p>
                     </div>
                 </div>
-                
+
                 <div class="faq-item bg-white rounded-lg shadow-sm border fade-in">
-                    <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
+                    <button
+                        class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
                         <span class="font-medium">Can I visit your showroom or factory?</span>
                         <i class="fas fa-chevron-down transition-transform"></i>
                     </button>
                     <div class="faq-answer hidden px-6 pb-4">
-                        <p class="text-gray-600">Yes, we welcome visits! Please contact us to schedule an appointment so we can give you a guided tour of our facility and showcase our product range.</p>
+                        <p class="text-gray-600">Yes, we welcome visits! Please contact us to schedule an appointment so
+                            we can give you a guided tour of our facility and showcase our product range.</p>
                     </div>
                 </div>
-                
+
                 <div class="faq-item bg-white rounded-lg shadow-sm border fade-in">
-                    <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
+                    <button
+                        class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
                         <span class="font-medium">Do you provide installation services?</span>
                         <i class="fas fa-chevron-down transition-transform"></i>
                     </button>
                     <div class="faq-answer hidden px-6 pb-4">
-                        <p class="text-gray-600">Yes. We offer professional delivery and installation services for all bulk and project-based orders to ensure everything is set up perfectly.</p>
+                        <p class="text-gray-600">Yes. We offer professional delivery and installation services for all
+                            bulk and project-based orders to ensure everything is set up perfectly.</p>
                     </div>
                 </div>
-                
+
                 <div class="faq-item bg-white rounded-lg shadow-sm border fade-in">
-                    <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
+                    <button
+                        class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
                         <span class="font-medium">Is there a warranty on your products?</span>
                         <i class="fas fa-chevron-down transition-transform"></i>
                     </button>
                     <div class="faq-answer hidden px-6 pb-4">
-                        <p class="text-gray-600">Yes, we offer a standard 1-year warranty on most of our products. Extended warranties are available on select items. Please check with our team for specific product coverage.</p>
+                        <p class="text-gray-600">Yes, we offer a standard 1-year warranty on most of our products.
+                            Extended warranties are available on select items. Please check with our team for specific
+                            product coverage.</p>
                     </div>
                 </div>
-                
+
                 <div class="faq-item bg-white rounded-lg shadow-sm border fade-in">
-                    <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
+                    <button
+                        class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
                         <span class="font-medium">Do you cater to large corporate or institutional projects?</span>
                         <i class="fas fa-chevron-down transition-transform"></i>
                     </button>
                     <div class="faq-answer hidden px-6 pb-4">
-                        <p class="text-gray-600">Absolutely. We specialize in large-scale orders and have experience working with corporate offices, schools, government organizations, and co-working spaces.</p>
+                        <p class="text-gray-600">Absolutely. We specialize in large-scale orders and have experience
+                            working with corporate offices, schools, government organizations, and co-working spaces.
+                        </p>
                     </div>
                 </div>
-                
+
                 <div class="faq-item bg-white rounded-lg shadow-sm border fade-in">
-                    <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
+                    <button
+                        class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
                         <span class="font-medium">Can you match our company's branding or color theme?</span>
                         <i class="fas fa-chevron-down transition-transform"></i>
                     </button>
                     <div class="faq-answer hidden px-6 pb-4">
-                        <p class="text-gray-600">Yes, we offer customization options for color, material, and finish to align your furniture with your brand identity.</p>
+                        <p class="text-gray-600">Yes, we offer customization options for color, material, and finish to
+                            align your furniture with your brand identity.</p>
                     </div>
                 </div>
-                
+
                 <div class="faq-item bg-white rounded-lg shadow-sm border fade-in">
-                    <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
+                    <button
+                        class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
                         <span class="font-medium">How do I place an order?</span>
                         <i class="fas fa-chevron-down transition-transform"></i>
                     </button>
                     <div class="faq-answer hidden px-6 pb-4">
-                        <p class="text-gray-600">You can get in touch with us via phone, email, or the contact form on our website. Once we understand your requirements, we'll send a quote and timeline.</p>
+                        <p class="text-gray-600">You can get in touch with us via phone, email, or the contact form on
+                            our website. Once we understand your requirements, we'll send a quote and timeline.</p>
                     </div>
                 </div>
-                
+
                 <div class="faq-item bg-white rounded-lg shadow-sm border fade-in">
-                    <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
+                    <button
+                        class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
                         <span class="font-medium">What payment methods do you accept?</span>
                         <i class="fas fa-chevron-down transition-transform"></i>
                     </button>
                     <div class="faq-answer hidden px-6 pb-4">
-                        <p class="text-gray-600">We accept payments via bank transfer, UPI, and cheque. Payment terms can be discussed based on the size and nature of the order.</p>
+                        <p class="text-gray-600">We accept payments via bank transfer, UPI, and cheque. Payment terms
+                            can be discussed based on the size and nature of the order.</p>
                     </div>
                 </div>
-                
+
                 <div class="faq-item bg-white rounded-lg shadow-sm border fade-in">
-                    <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
+                    <button
+                        class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
                         <span class="font-medium">Do you ship outside your city/state?</span>
                         <i class="fas fa-chevron-down transition-transform"></i>
                     </button>
                     <div class="faq-answer hidden px-6 pb-4">
-                        <p class="text-gray-600">Yes, we deliver across India. For large or outstation orders, we coordinate with trusted logistics partners to ensure timely and safe delivery.</p>
+                        <p class="text-gray-600">Yes, we deliver across India. For large or outstation orders, we
+                            coordinate with trusted logistics partners to ensure timely and safe delivery.</p>
                     </div>
                 </div>
             </div>
@@ -1197,9 +1369,10 @@
             <div class="text-center mb-16 fade-in">
                 <h2 class="text-4xl font-light mb-4">Let's Build Your Workspace Together</h2>
                 <div class="w-24 h-1 bg-yellow-500 mx-auto mb-4"></div>
-                <p class="text-gray-600 max-w-2xl mx-auto">Have a question? Need a custom quote? Our team is ready to help.</p>
+                <p class="text-gray-600 max-w-2xl mx-auto">Have a question? Need a custom quote? Our team is ready to
+                    help.</p>
             </div>
-            
+
             <div class="grid lg:grid-cols-2 gap-12">
                 <div class="fade-in">
                     <div class="bg-white rounded-lg shadow-lg p-8">
@@ -1207,27 +1380,36 @@
                         <form id="contactForm" class="space-y-6">
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-2">Name *</label>
-                                <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent" placeholder="Your full name">
+                                <input type="text" id="name" name="name" required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
+                                    placeholder="Your full name">
                             </div>
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
-                                <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent" placeholder="your@email.com">
+                                <input type="email" id="email" name="email" required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
+                                    placeholder="your@email.com">
                             </div>
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-2">Phone</label>
-                                <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent" placeholder="Your phone number">
+                                <input type="tel" id="phone" name="phone"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
+                                    placeholder="Your phone number">
                             </div>
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-2">Message *</label>
-                                <textarea rows="4" id="message" name="message" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent" placeholder="Tell us about your requirements..."></textarea>
+                                <textarea rows="4" id="message" name="message" required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
+                                    placeholder="Tell us about your requirements..."></textarea>
                             </div>
-                            <button type="submit" id="submitBtn" class="w-full bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-3 rounded-lg font-semibold transition-colors">
+                            <button type="submit" id="submitBtn"
+                                class="w-full bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-3 rounded-lg font-semibold transition-colors">
                                 Send Message
                             </button>
                         </form>
                     </div>
                 </div>
-                
+
                 <div class="fade-in">
                     <div class="bg-white rounded-lg shadow-lg p-8">
                         <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
@@ -1236,7 +1418,8 @@
                                 <i class="fas fa-map-marker-alt text-yellow-500 mt-1 mr-4"></i>
                                 <div>
                                     <h4 class="font-semibold mb-1">Factory Address</h4>
-                                    <p class="text-gray-600">Sun Office Furniture<br>Khasra Number-54/11 Triveni Colony<br>Bakhtawarpur New Delhi<br>Pincode-110036</p>
+                                    <p class="text-gray-600">Sun Office Furniture<br>Khasra Number-54/11 Triveni
+                                        Colony<br>Bakhtawarpur New Delhi<br>Pincode-110036</p>
                                 </div>
                             </div>
                             <div class="flex items-start">
@@ -1264,7 +1447,9 @@
                                 <i class="fas fa-map text-yellow-500 mt-1 mr-4"></i>
                                 <div>
                                     <h4 class="font-semibold mb-1">Google Maps Location</h4>
-                                    <a href="https://maps.google.com/?q=Khasra+Number-54/11+Triveni+Colony+Bakhtawarpur+New+Delhi+110036" target="_blank" class="text-yellow-600 hover:text-yellow-700 underline">View on Google Maps</a>
+                                    <a href="https://maps.google.com/?q=Khasra+Number-54/11+Triveni+Colony+Bakhtawarpur+New+Delhi+110036"
+                                        target="_blank" class="text-yellow-600 hover:text-yellow-700 underline">View on
+                                        Google Maps</a>
                                 </div>
                             </div>
                         </div>
@@ -1280,42 +1465,60 @@
             <div class="grid md:grid-cols-4 gap-8">
                 <div>
                     <div class="flex items-center mb-4">
-                        <img src="https://i.ibb.co/yFVkZWJt/standard-color.png" 
-                             alt="Sun Office Furniture Logo" 
-                             class="h-8 w-auto mr-3"
-                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <img src="https://i.ibb.co/yFVkZWJt/standard-color.png" alt="Sun Office Furniture Logo"
+                            class="h-8 w-auto mr-3"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                         <div class="hidden items-center">
                             <i class="fas fa-sun text-yellow-500 mr-2 text-2xl"></i>
                         </div>
                         <span class="text-xl font-bold">Sun Office Furniture</span>
                     </div>
-                    <p class="text-gray-400 mb-4">Crafting premium office furniture since 2018, backed by 27+ years of industry expertise.</p>
+                    <p class="text-gray-400 mb-4">Crafting premium office furniture since 2018, backed by 27+ years of
+                        industry expertise.</p>
                 </div>
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
                     <ul class="space-y-2">
                         <li><a href="#home" class="text-gray-400 hover:text-yellow-500 transition-colors">Home</a></li>
-                        <li><a href="#products" class="text-gray-400 hover:text-yellow-500 transition-colors">Products</a></li>
-                        <li><a href="#gallery" class="text-gray-400 hover:text-yellow-500 transition-colors">Gallery</a></li>
-                        <li><a href="#about" class="text-gray-400 hover:text-yellow-500 transition-colors">About</a></li>
-                        <li><a href="#contact" class="text-gray-400 hover:text-yellow-500 transition-colors">Contact</a></li>
+                        <li><a href="#products"
+                                class="text-gray-400 hover:text-yellow-500 transition-colors">Products</a></li>
+                        <li><a href="#gallery" class="text-gray-400 hover:text-yellow-500 transition-colors">Gallery</a>
+                        </li>
+                        <li><a href="#about" class="text-gray-400 hover:text-yellow-500 transition-colors">About</a>
+                        </li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-yellow-500 transition-colors">Contact</a>
+                        </li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Products</h3>
                     <ul class="space-y-2">
-                        <li><button onclick="showProductModal('executive-chairs')" class="text-gray-400 hover:text-yellow-500 transition-colors cursor-pointer text-left">Executive Chairs</button></li>
-                        <li><button onclick="showProductModal('modular-workstations')" class="text-gray-400 hover:text-yellow-500 transition-colors cursor-pointer text-left">Workstations</button></li>
-                        <li><button onclick="showProductModal('conference-tables')" class="text-gray-400 hover:text-yellow-500 transition-colors cursor-pointer text-left">Conference Tables</button></li>
-                        <li><button onclick="showProductModal('storage-solutions')" class="text-gray-400 hover:text-yellow-500 transition-colors cursor-pointer text-left">Storage Solutions</button></li>
+                        <li><button onclick="showProductModal('executive-chairs')"
+                                class="text-gray-400 hover:text-yellow-500 transition-colors cursor-pointer text-left">Executive
+                                Chairs</button></li>
+                        <li><button onclick="showProductModal('modular-workstations')"
+                                class="text-gray-400 hover:text-yellow-500 transition-colors cursor-pointer text-left">Workstations</button>
+                        </li>
+                        <li><button onclick="showProductModal('conference-tables')"
+                                class="text-gray-400 hover:text-yellow-500 transition-colors cursor-pointer text-left">Conference
+                                Tables</button></li>
+                        <li><button onclick="showProductModal('storage-solutions')"
+                                class="text-gray-400 hover:text-yellow-500 transition-colors cursor-pointer text-left">Storage
+                                Solutions</button></li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Contact</h3>
                     <ul class="space-y-2">
-                        <li><a href="tel:+917011160581" class="text-gray-400 hover:text-yellow-500 transition-colors">+91 7011160581</a></li>
-                        <li><a href="mailto:sunind2018@gmail.com" class="text-gray-400 hover:text-yellow-500 transition-colors">sunind2018@gmail.com</a></li>
-                        <li><a href="https://maps.google.com/?q=Khasra+Number-54/11+Triveni+Colony+Bakhtawarpur+New+Delhi+110036" target="_blank" class="text-gray-400 hover:text-yellow-500 transition-colors">Bakhtawarpur, New Delhi</a></li>
+                        <li><a href="tel:+917011160581"
+                                class="text-gray-400 hover:text-yellow-500 transition-colors">+91 7011160581</a></li>
+                        <li><a href="mailto:sunind2018@gmail.com"
+                                class="text-gray-400 hover:text-yellow-500 transition-colors">sunind2018@gmail.com</a>
+                        </li>
+                        <li><a href="https://maps.google.com/?q=Khasra+Number-54/11+Triveni+Colony+Bakhtawarpur+New+Delhi+110036"
+                                target="_blank"
+                                class="text-gray-400 hover:text-yellow-500 transition-colors">Bakhtawarpur, New
+                                Delhi</a></li>
                         <li class="text-gray-400">Pincode: 110036</li>
                     </ul>
                 </div>
@@ -1342,14 +1545,17 @@
     </div>
 
     <!-- Product Modal -->
-    <div id="productModal" class="fixed inset-0 bg-black bg-opacity-75 product-modal flex items-center justify-center z-50 hidden">
-        <div class="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-lg max-w-4xl w-full mx-4 modal-content border-2 border-yellow-200 shadow-2xl">
-            <div class="flex justify-between items-center p-6 border-b border-yellow-200 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-t-lg">
+    <div id="productModal"
+        class="fixed inset-0 bg-black bg-opacity-75 product-modal flex items-center justify-center z-50 hidden">
+        <div
+            class="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-lg max-w-4xl w-full mx-4 modal-content border-2 border-yellow-200 shadow-2xl">
+            <div
+                class="flex justify-between items-center p-6 border-b border-yellow-200 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-t-lg">
                 <h2 id="modalTitle" class="text-2xl font-bold text-white"></h2>
                 <div class="flex items-center space-x-4">
-                    <a href="https://drive.google.com/file/d/1Ip_6HN4Cgm2N043p4enCn6DVWHvY_CjL/view?usp=drive_link" 
-                       target="_blank" 
-                       class="bg-white text-yellow-600 hover:bg-yellow-50 px-4 py-2 rounded-lg font-semibold transition-colors flex items-center">
+                    <a href="https://drive.google.com/file/d/1Ip_6HN4Cgm2N043p4enCn6DVWHvY_CjL/view?usp=drive_link"
+                        target="_blank"
+                        class="bg-white text-yellow-600 hover:bg-yellow-50 px-4 py-2 rounded-lg font-semibold transition-colors flex items-center">
                         <i class="fas fa-download mr-2"></i>
                         Download Catalog
                     </a>
@@ -1436,7 +1642,7 @@
                 const faqItem = button.parentElement;
                 const answer = faqItem.querySelector('.faq-answer');
                 const icon = button.querySelector('i');
-                
+
                 answer.classList.toggle('hidden');
                 icon.classList.toggle('fa-chevron-down');
                 icon.classList.toggle('fa-chevron-up');
@@ -1449,7 +1655,7 @@
                 const article = button.closest('article');
                 const preview = article.querySelector('.blog-preview');
                 const fullContent = article.querySelector('.blog-full-content');
-                
+
                 preview.classList.add('hidden');
                 fullContent.classList.remove('hidden');
             });
@@ -1460,7 +1666,7 @@
                 const article = button.closest('article');
                 const preview = article.querySelector('.blog-preview');
                 const fullContent = article.querySelector('.blog-full-content');
-                
+
                 fullContent.classList.add('hidden');
                 preview.classList.remove('hidden');
             });
@@ -1471,7 +1677,7 @@
             const modal = document.getElementById('productModal');
             const title = document.getElementById('modalTitle');
             const content = document.getElementById('modalContent');
-            
+
             const industryData = {
                 'corporate-offices': {
                     title: 'Corporate Offices',
@@ -1720,7 +1926,7 @@
                     `
                 }
             };
-            
+
             const industry = industryData[industryType];
             if (industry) {
                 title.textContent = industry.title;
@@ -1734,7 +1940,7 @@
             const modal = document.getElementById('productModal');
             const title = document.getElementById('modalTitle');
             const content = document.getElementById('modalContent');
-            
+
             const productData = {
                 'executive-chairs': {
                     title: 'Executive Chairs',
@@ -1982,7 +2188,7 @@
                     `
                 }
             };
-            
+
             const product = productData[productType];
             if (product) {
                 title.textContent = product.title;
@@ -1990,30 +2196,30 @@
                 modal.classList.remove('hidden');
             }
         }
-        
+
         function closeProductModal() {
             document.getElementById('productModal').classList.add('hidden');
         }
 
         // Form submission
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
             e.preventDefault();
-            
+
             const submitBtn = document.getElementById('submitBtn');
             const originalText = submitBtn.textContent;
-            
+
             // Show loading state
             submitBtn.textContent = 'Sending...';
             submitBtn.disabled = true;
             submitBtn.classList.add('opacity-75');
-            
+
             // Get form data
             const formData = new FormData(this);
             const name = formData.get('name');
             const email = formData.get('email');
             const phone = formData.get('phone');
             const message = formData.get('message');
-            
+
             // Create WhatsApp message
             const whatsappMessage = `Hello! New inquiry from Sun Office Furniture website:
             
@@ -2021,42 +2227,44 @@ Name: ${name}
 Email: ${email}
 Phone: ${phone || 'Not provided'}
 Message: ${message}`;
-            
+
             // Encode message for URL
             const encodedMessage = encodeURIComponent(whatsappMessage);
             const whatsappURL = `https://wa.me/917011160581?text=${encodedMessage}`;
-            
+
             // Simulate sending delay
             setTimeout(() => {
                 // Reset button
                 submitBtn.textContent = originalText;
                 submitBtn.disabled = false;
                 submitBtn.classList.remove('opacity-75');
-                
+
                 // Show success message
                 alert('Thank you for your message! You will be redirected to WhatsApp to complete sending your inquiry.');
-                
+
                 // Open WhatsApp
                 window.open(whatsappURL, '_blank');
-                
+
                 // Reset form
                 this.reset();
             }, 1000);
         });
 
         // Close modal when clicking outside
-        document.getElementById('imageModal').addEventListener('click', function(e) {
+        document.getElementById('imageModal').addEventListener('click', function (e) {
             if (e.target === this) {
                 closeImageModal();
             }
         });
 
         // Close product modal when clicking outside
-        document.getElementById('productModal').addEventListener('click', function(e) {
+        document.getElementById('productModal').addEventListener('click', function (e) {
             if (e.target === this) {
                 closeProductModal();
             }
         });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'977437e7d7af47d4',t:'MTc1NjU1NjE3Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+    <script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'977437e7d7af47d4',t:'MTc1NjU1NjE3Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
+</body>
+
 </html>
